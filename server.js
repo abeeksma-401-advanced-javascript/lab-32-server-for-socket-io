@@ -16,4 +16,13 @@ io.on('connection', socket => {
 });
 
 
+//for Q server if i get to it
+const Q = require('@nmq/q');
+Q.start()
+
+const chat = new Q('chat');
+chat.monitorEvent('message');
+
+
+
 
